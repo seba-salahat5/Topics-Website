@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>home page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&family=Poppins:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link href="assets\styles.css" rel="stylesheet">
+    <script src="JavaScript_files\home.js" type="module"></script>
+</head>
+
+<body>
+    <header class="default-bg">
+        <h1>Web Topics</h1>
+        <span>
+            <button class="default-bg header-button" id="darkModeToggle">
+                <ion-icon name="moon-outline" class="button-icon"></ion-icon>
+                Dark Mode
+            </button>
+            <button class="default-bg header-button">
+                <ion-icon name="heart-outline" class="button-icon"></ion-icon>
+                Favourites
+            </button>
+        </span>
+    </header>
+    <div class="heading-container default-bg">
+        <div class="heading-triangle heading-triangle-right"></div>
+        <div class="heading-triangle heading-triangle-left"></div>
+        <div class="heading-text">
+            <h2>Welcome to our website!</h2>
+            <p>We have a new design that's fresh, modern, and easy to use.</p>
+        </div>
+    </div>
+    <main class="default-container"> 
+        <div class="main-line">
+            <span class="search-bar default-bg main-line-component">
+                <ion-icon class="search-icon" name="search-outline"></ion-icon>
+                <input type="text" id="SearchInput" class="default-bg" placeholder="Search the website...">
+            </span>
+            <div class="select-container">
+                <div class="dropdown default-bg main-line-component">
+                    <label for="SortOptions">Sort By:</label>
+                    <select id="SortOptions" class="default-bg">
+                        <option value="Default" selected>Default</option>
+                        <option value="Topic Title">Topic Title</option>
+                        <option value="Author Name">Author Name</option>
+                    </select>
+                </div>
+                <div class="dropdown default-bg main-line-component">
+                    <label for="FilterOptions">Filter By:</label>
+                    <select id="FilterOptions" class="default-bg">
+                        <option value="Default">Default</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="loading-container" id="loadingContainer">
+            <div class="spinner" id="spinnerContainer">
+                <div class="spinner-ripple-outer">
+                    <div class="spinner-ripple">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+    </main>
+    <footer class="default-container">
+        <h4>Developed with <ion-icon id="heartIcon" name="heart"></ion-icon> &copy; 2023</h4>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
