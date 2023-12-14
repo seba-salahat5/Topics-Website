@@ -6,3 +6,5 @@ export const SORT_OPTIONS_ID = 'SortOptions';
 export const Filter_OPTIONS_ID = 'FilterOptions'; 
 export const SEARCH_INPUT_ID  = 'SearchInput';
 export const THEME_BTN_ID = 'darkModeToggle';
+export const FAV_BTN_ID = 'favPanelToggle';
+export const FAV_PANEL_ID = 'favoritesPanel';

@@ -3,6 +3,7 @@ import { renderTopics, addFilterOptions } from "./render_functions.js";
 import { onSortChange, extractCategories, onFilterChange } from "./topics_functions.js";
 import { onSelectEvent, onSearchEvent  } from "./event_handling_functions.js";
 import {initializeDarkMode} from "./dark_mode_functions.js";
+import {initializeFavourites} from "./favourites_functions.js";
 
 
 let topics = [];
@@ -37,6 +38,7 @@ async function homePageController() {
     });
     updateTopics();
     initializeDarkMode();
+    initializeFavourites();
 }
 
 let updateTopics = function () {

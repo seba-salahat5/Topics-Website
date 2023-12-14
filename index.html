@@ -22,7 +22,7 @@
                 <ion-icon name="moon-outline" class="button-icon"></ion-icon>
                 Dark Mode
             </button>
-            <button class="default-bg header-button">
+            <button class="default-bg header-button" id="favPanelToggle">
                 <ion-icon name="heart-outline" class="button-icon"></ion-icon>
                 Favourites
             </button>
@@ -36,7 +36,7 @@
             <p>We have a new design that's fresh, modern, and easy to use.</p>
         </div>
     </div>
-    <main class="default-container"> 
+    <main class="default-container">
         <div class="main-line">
             <span class="search-bar default-bg main-line-component">
                 <ion-icon class="search-icon" name="search-outline"></ion-icon>
@@ -72,6 +72,45 @@
 
         <div class="cards-container" id="cardsContainer"></div>
     </main>
+    <div class="favorites-panel default-bg" id="favoritesPanel">
+        <h1 class="favorites-title">My Favourite Topics</h1>
+        <div class="favorites-flexbox">
+            <div class="favorites-flexbox">
+                <div class="flexitem default-bg">
+                    <div class="fav-card-box">
+                        <img class="favourite-logo" src="assets/Logos/react.webp" alt="React" />
+                        <div class="info-box">
+                            <h2 class="card-text card-title favorites-title">React</h2>
+                            <div class="raiting-bar favorites-rating" id="raitingBar">
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star-outline"></ion-icon></span>
+                            </div>
+                        </div>
+                    </div>`
+                </div>
+            </div>
+            <div class="favorites-flexbox">
+                <div class="flexitem default-bg">
+                    <div class="fav-card-box">
+                        <img class="favourite-logo" src="assets/Logos/cloud.jpeg" alt="Cloud Computing" />
+                        <div class="info-box">
+                            <h2 class="card-text card-title favorites-title">Cloud Computing</h2>
+                            <div class="raiting-bar favorites-rating" id="raitingBar">
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star"></ion-icon></span>
+                                <span><ion-icon class="star" name="star-half-outline"></ion-icon></span>
+                            </div>
+                        </div>
+                    </div>`
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="default-container">
         <h4>Developed with <ion-icon id="heartIcon" name="heart"></ion-icon> &copy; 2023</h4>
     </footer>
