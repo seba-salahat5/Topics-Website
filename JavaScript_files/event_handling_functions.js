@@ -1,4 +1,6 @@
-import { SORT_OPTIONS_ID, Filter_OPTIONS_ID } from "./constants.js";
+import { SORT_OPTIONS_ID, Filter_OPTIONS_ID, SEARCH_INPUT_ID } from "./constants.js";
+
+let debounceDelay;
 
 export let onSelectEvent = function (cb) {
     const sortOptions = document.getElementById(SORT_OPTIONS_ID);
@@ -16,4 +18,14 @@ export let onSelectEvent = function (cb) {
             : cb(selectedValue, "filter");
     }
 
+}
+
+export let onSearchEvent = function (cb) {
+    const inputField = document.getElementById(SEARCH_INPUT_ID);
+    inputField.addEventListener('input', async (event) => {
+        clearTimeout(debounceDelay);
+        debounceDelay = setTimeout(() => {
+            cb(event.target.value);
+        }, 300);
+    });
 }

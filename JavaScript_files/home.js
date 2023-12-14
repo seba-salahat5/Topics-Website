@@ -1,7 +1,7 @@
 import { fetchTopics } from "./API_functions.js";
 import { renderTopics, addFilterOptions } from "./render_functions.js";
 import { onSortChange, extractCategories, onFilterChange } from "./topics_functions.js";
-import { onSelectEvent } from "./event_handling_functions.js";
+import { onSelectEvent, onSearchEvent  } from "./event_handling_functions.js";
 
 
 let topics = [];
@@ -11,8 +11,13 @@ let searchValue = "";
 let favouritesTopics = [];
 
 async function homePageController() {
-    /*onSearchEvent();
-    onFilterEvent();*/
+    
+    onSearchEvent(async (searchString) => {
+        searchValue = searchString;
+        topics = await fetchTopics(searchValue);
+        updateTopics();
+    });
+
 
     onSelectEvent((selectedOption, select) => {
         // select = "sort" or "filter" indicates which select caused the event
@@ -25,7 +30,7 @@ async function homePageController() {
         updateTopics();
     });
 
-    topics = await fetchTopics();
+    topics = await fetchTopics("");
     extractCategories(topics, (categories) => {
         addFilterOptions(categories);
     });

@@ -1,4 +1,3 @@
-import { Filter_OPTIONS_ID } from "./constants.js";
 
 export let onSortChange = function (topics, selectedSort) {
   let sortedTopics = topics;

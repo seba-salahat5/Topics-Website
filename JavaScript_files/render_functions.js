@@ -43,13 +43,17 @@ export let renderTopics = function (topics) {
 
 export let showLoadingSpinner = function () {
   const spinnerContainer = document.getElementById(SPINNER_CONTAINER_ID);
-  spinnerContainer.style.display = "flex";
+  if(spinnerContainer){
+    spinnerContainer.style.display = "flex";
+  }
 }
 
 
 export let hideLoadingSpinner = function () {
   const spinnerContainer = document.getElementById(SPINNER_CONTAINER_ID);
-  spinnerContainer.style.display = "none";
+  if(spinnerContainer){
+    spinnerContainer.style.display = "none";
+  }
 }
 
 export let addFilterOptions = function (categories) {
