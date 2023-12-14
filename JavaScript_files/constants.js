@@ -5,3 +5,4 @@ export const SPINNER_CONTAINER_ID = 'spinnerContainer';
 export const SORT_OPTIONS_ID = 'SortOptions';
 export const Filter_OPTIONS_ID = 'FilterOptions'; 
 export const SEARCH_INPUT_ID  = 'SearchInput';
+export const THEME_BTN_ID = 'darkModeToggle';

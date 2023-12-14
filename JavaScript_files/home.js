@@ -2,6 +2,7 @@ import { fetchTopics } from "./API_functions.js";
 import { renderTopics, addFilterOptions } from "./render_functions.js";
 import { onSortChange, extractCategories, onFilterChange } from "./topics_functions.js";
 import { onSelectEvent, onSearchEvent  } from "./event_handling_functions.js";
+import {initializeDarkMode} from "./dark_mode_functions.js";
 
 
 let topics = [];
@@ -35,6 +36,7 @@ async function homePageController() {
         addFilterOptions(categories);
     });
     updateTopics();
+    initializeDarkMode();
 }
 
 let updateTopics = function () {

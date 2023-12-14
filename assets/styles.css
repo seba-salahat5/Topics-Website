@@ -39,7 +39,7 @@ ion-icon {
 }
 
 header>h1 {
-    display: inline-block;
+    display: flex;
     font-size: 17px;
     color: var(--brand-primary);
 }
@@ -51,7 +51,7 @@ header>h1 {
     padding: 6px 6px;
     margin-left: 3px;
     font-weight: 600;
-    align-items: center;
+    text-align: center;
 }
 
 header>span {
@@ -275,6 +275,7 @@ strong {
     height: 130px;
     width: 100%;
     object-fit: cover;
+    background-color: #FFFFFF;
 }
 
 .card-body {
@@ -399,12 +400,12 @@ footer {
     .cards-container {
         grid-template-columns: 100%;
     }
+    .header-button{
+        font-size: 0px;
+    }
 }
 
 @media screen and (max-width: 390px) {
-    header>span>button {
-        font-size: 0px;
-    }
 
     .heading-container {
         margin-bottom: 15px;
