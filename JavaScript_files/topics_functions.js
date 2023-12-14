@@ -30,7 +30,7 @@ export let onSortChange = function (topics, selectedSort) {
       });
   }
   return sortedTopics;
-} 
+}
 
 
 export let onFilterChange = function (topics, selectedFilter) {
@@ -41,8 +41,10 @@ export let onFilterChange = function (topics, selectedFilter) {
 export let extractCategories = function (topics, cb) {
   let categories = [];
 
-  // here I used the set to ensure that each category stored once and then returned it back to an array
-  categories = [...new Set(topics.map(topic => topic.category))];
+  if (topics != null) {
+    // here I used the set to ensure that each category stored once and then returned it back to an array
+    categories = [...new Set(topics.map(topic => topic.category))];
+  }
   cb(categories);
 }
 

@@ -38,9 +38,14 @@ async function homePageController() {
 }
 
 let updateTopics = function () {
-    let filteredTopics = onFilterChange(topics, selectedFilter);
-    let sortedTopics = onSortChange(filteredTopics, selectedSort);
-    renderTopics(sortedTopics);
+    if(topics != null){
+        let filteredTopics = onFilterChange(topics, selectedFilter);
+        let sortedTopics = onSortChange(filteredTopics, selectedSort);
+        renderTopics(sortedTopics);
+    }
+    else{
+        renderTopics(topics);
+    }
 };
 
 homePageController();

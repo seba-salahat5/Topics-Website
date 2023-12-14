@@ -3,6 +3,8 @@ import { LOAD_CONTAINER_ID, CARDS_CONTAINER_ID, SPINNER_CONTAINER_ID, Filter_OPT
 export let renderTopics = function (topics) {
   const cardsContainer = document.getElementById(CARDS_CONTAINER_ID);
   const loadingContainer = document.getElementById(LOAD_CONTAINER_ID);
+
+  console.log(topics);
   if (topics == null) {
     loadingContainer.innerHTML = `<h3><strong>Something went wrong. Web topics failed to load.</strong></h3>`;
   }
