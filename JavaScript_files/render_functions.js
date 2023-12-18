@@ -1,4 +1,4 @@
-import { LOAD_CONTAINER_ID, CARDS_CONTAINER_ID, SPINNER_CONTAINER_ID, Filter_OPTIONS_ID, MAIN_ID, FAV_FLEXBOX_ID,DETAILS_CONTAINER_ID } from "./constants.js";
+import { LOAD_CONTAINER_ID, CARDS_CONTAINER_ID, SPINNER_CONTAINER_ID, Filter_OPTIONS_ID, MAIN_ID, FAV_FLEXBOX_ID, DETAILS_CONTAINER_ID } from "./constants.js";
 
 export let renderTopics = function (topics) {
   const cardsContainer = document.getElementById(CARDS_CONTAINER_ID);
@@ -14,10 +14,10 @@ export let renderTopics = function (topics) {
     for (let topic of topics) {
       let cardNavigator = document.createElement('a');
       cardNavigator.addEventListener('click', () => {
-        let parameter = new URLSearchParams();
-        parameter.append("id", `${topic.id}`);
-        let href = "https://seba-salahat5.github.io/Seba-Salahat-JS/details.html?" + parameter.toString();
-        window.location.href = href;
+
+      let parameter = new URLSearchParams();
+      parameter.append("id", `${topic.id}`);
+      location.href = "https://seba-salahat5.github.io/Seba-Salahat-JS/details.html?" + parameter.toString();
       });
 
       let topicCard = document.createElement('div');
@@ -131,7 +131,7 @@ export let displayDetails = function (data, fav) {
       </aside>
   </div>
 </section>`;
-let subtopicsContainer = document.createElement('div');
+  let subtopicsContainer = document.createElement('div');
   subtopicsContainer.setAttribute('class', 'details');
 
   let detailsTitlePanel = document.createElement('div');
