@@ -1,4 +1,5 @@
-import { SORT_OPTIONS_ID, Filter_OPTIONS_ID, SEARCH_INPUT_ID } from "./constants.js";
+import { SORT_OPTIONS_ID, Filter_OPTIONS_ID, SEARCH_INPUT_ID, FAV_ADD_BTN_ID } from "./constants.js";
+import {ifFav} from "./favourites_functions.js";
 
 let debounceDelay;
 
@@ -28,4 +29,18 @@ export let onSearchEvent = function (cb) {
             cb(event.target.value);
         }, 300);
     });
+}
+
+export let onAddToFavEvent = function(currentTopic,favourateTopics, cb){
+    const favBtn = document.getElementById(FAV_ADD_BTN_ID);
+    favBtn.addEventListener('click', ()=>{
+        if(ifFav(currentTopic,favourateTopics)){
+            favBtn.innerHTML = `Add to Favourites<ion-icon name="heart-outline" class="fav-icon heighlited-text"></ion-icon>`; 
+            cb(favourateTopics.filter(topic => topic.id != currentTopic.id));
+        }
+        else {
+            favBtn.innerHTML = `Remove from Favourites<ion-icon name="heart-outline" class="fav-icon heighlited-text"></ion-icon>`;
+            cb([...favourateTopics, currentTopic]);
+        }
+    })
 }

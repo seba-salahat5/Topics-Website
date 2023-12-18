@@ -1,4 +1,5 @@
 export const API_URL = 'https://tap-web-1.herokuapp.com/topics';
+export const MAIN_ID = 'main';
 export const LOAD_CONTAINER_ID = 'loadingContainer';
 export const CARDS_CONTAINER_ID = 'cardsContainer';
 export const SPINNER_CONTAINER_ID = 'spinnerContainer';
@@ -8,3 +9,6 @@ export const SEARCH_INPUT_ID  = 'SearchInput';
 export const THEME_BTN_ID = 'darkModeToggle';
 export const FAV_BTN_ID = 'favPanelToggle';
 export const FAV_PANEL_ID = 'favoritesPanel';
+export const FAV_FLEXBOX_ID = 'favoritesFlexbox';
+export const FAV_ADD_BTN_ID = 'favAddBtn';
+export const DETAILS_CONTAINER_ID = 'detailsContent';
