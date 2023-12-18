@@ -16,7 +16,7 @@ export let renderTopics = function (topics) {
       cardNavigator.addEventListener('click', () => {
         let parameter = new URLSearchParams();
         parameter.append("id", `${topic.id}`);
-        let href = "https://seba-salahat5.github.io/Seba-Salahat-JS/details?" + parameter.toString();
+        let href = "https://seba-salahat5.github.io/Seba-Salahat-JS/details.html?" + parameter.toString();
         window.location.href = href;
       });
 
